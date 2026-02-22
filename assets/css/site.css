@@ -71,7 +71,7 @@
 
 /* About (Sobre mí)  */
 .about-page {
-    padding: 18px 20px;
+    padding: 45px 20px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -145,7 +145,7 @@
 
 /* Proyectos (Lista) */
 .projects-page {
-    padding: 18px 20px;
+    padding: 45px 20px;
     display: flex;
     justify-content: center;
 }
@@ -207,7 +207,7 @@
 
 /* Skills (Habilidades) */
 .skills-page {
-    padding: 18px 20px;
+    padding: 45px 20px;
     display: flex;
     justify-content: center;
 }
@@ -264,7 +264,7 @@
 
 /* Contacto */
 .contact-page {
-    padding: 18px 20px;
+    padding: 45px 20px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
