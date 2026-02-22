@@ -1,0 +1,175 @@
+/* Responsive */
+
+/* Tablet */
+@media (max-width: 900px) {
+  /* About */
+  .about-body {
+    grid-template-columns: 1fr;
+  }
+
+  .about-images {
+    height: auto;
+    margin-top: 40px;
+  }
+
+  .about-images img {
+    position: static;
+    width: 100%;
+    margin-bottom: 20px;
+    height: auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  /* Hero */
+  .hero h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .highlight1,
+  .highlight2 {
+    padding: 1px 8px;
+  }
+
+  /* Nav */
+  #menu {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+    position: absolute;
+    top: 33px;
+    right: 35px;
+    z-index: 1100;
+  }
+
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 35px;
+    z-index: 1100;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 40px;
+
+    background: rgba(0,47,61,0.92);
+    backdrop-filter: blur(8px);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    z-index: 1000;
+  }
+
+  .nav-links a {
+    font-size: 2rem;
+    text-decoration: none;
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  /* About */
+  .about-content h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .about-content h2 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  /* Proyectos */
+  .projects-title {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .projects-list {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .project-item {
+    height: 240px;
+    border-width: 4px;
+  }
+
+  /* En mobile el overlay siempre visible */
+  .project-item .overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .project-item .overlay h2 {
+    font-size: 1.1rem;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .project-item .overlay .project-type {
+    font-size: 0.9rem;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Contacto */
+  .contact-container h1 {
+    font-size: 2rem;
+  }
+
+  .contact-container p {
+    font-size: 1rem;
+  }
+
+  .contact-item {
+    padding: 12px 15px;
+  }
+
+  .contact-item a,
+  .contact-item span {
+    font-size: 1rem;
+  }
+
+  /* Habilidades */
+  .skills-container h1 {
+    font-size: 2rem;
+  }
+
+  .skills-intro {
+    font-size: 1rem;
+  }
+}

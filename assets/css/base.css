@@ -1,0 +1,57 @@
+/* Fuente local */
+@font-face {
+    font-family: 'BAHNSCHRIFT';
+    src: url('../fonts/BAHNSCHRIFT.TTF') format('truetype');
+}
+
+/* Variables de tema*/
+:root {
+    --bg-top: #044858;
+    --bg-bottom: #002f3d;
+    --text: #ffffff;
+
+    --panel: rgba(255, 255, 255, 0.08);
+    --panel-2: rgba(255, 255, 255, 0.06);
+    --border: rgba(255, 255, 255, 0.15);
+    --border-soft: rgba(255, 255, 255, 0.12);
+
+    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.35);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+    --radius-sm: 12px;
+    --radius-md: 14px;
+    --radius-lg: 15px;
+    --radius-xl: 20px;
+
+    --container: 1050px;
+
+    --ease: 0.3s ease;
+    --ease-slow: 0.5s ease;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Globales */
+body {
+    font-family: 'BAHNSCHRIFT', sans-serif;
+    background: linear-gradient(to bottom, var(--bg-top), var(--bg-bottom));
+    color: var(--text);
+    min-height: 100vh;
+    padding-top: 25px;
+    opacity: 1;
+}
+
+body.fade-in {
+    opacity: 1;
+}
+
+/* Tipografía/Etiquetas comunes */
+strong {
+    color: var(--text);
+    font-weight: 600;
+}
