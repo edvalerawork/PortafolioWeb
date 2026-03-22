@@ -582,19 +582,26 @@
 }
 
 .cert-item:hover {
-    transform: translateX(4px);
+    transform: scale(1.02);
     background: rgba(255, 255, 255, 0.10);
     border-color: rgba(255, 255, 255, 0.22);
 }
 
-.cert-item__name {
-    font-weight: 700;
-    margin-bottom: 4px;
+.cert-item__meta {
+    font-weight: 600;
+    font-size: 15px;
+    color: #ffffff; /* 🔥 certificado (lo importante) */
+    margin-bottom: 2px;
 }
 
-.cert-item__meta {
-    opacity: 0.85;
-    font-size: 0.95rem;
+.cert-item__name {
+    font-size: 13px;
+    color: #9ca3af; /* 🔽 institución (secundario) */
+}
+
+
+.cert-item__meta::before {
+    content: "";
 }
 
 /* Contacto */

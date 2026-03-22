@@ -36,18 +36,28 @@ const certList = document.getElementById("certList");
 // Lista de certificados
 const certs = [
   {
-    name: "MTPE CAPACITA-T | 2026",
+    name: "MTPE CAPACITA-T (2026)",
+    meta: "Certificado Desarrollo Back-End",
+    src: "assets/certs/Certificado_Desarrollo_Web_Back-end.pdf"
+  },
+  {
+    name: "MTPE CAPACITA-T (2026)",
     meta: "Certificado Desarrollo Front-End",
     src: "assets/certs/Certificado_Desarrollo_Web_Front-end.pdf"
   },
   {
-    name: "Instituto Certus | 2025",
-    meta: "Certificado Módular: Pruebas e Implementación de Software",
+    name: "Instituto Certus (2026)",
+    meta: "Certificado Módular III: Diseño de Software",
+    src: "assets/certs/Certificado_Modular_Diseño.pdf"
+  },
+  {
+    name: "Instituto Certus (2025)",
+    meta: "Certificado Módular II: Pruebas e Implementación de Software",
     src: "assets/certs/Certificado_Modular_Pruebas.pdf"
   },
   {
-    name: "Instituto Certus | 2022",
-    meta: "Certificado Módular: Desarrollo de Software",
+    name: "Instituto Certus (2022)",
+    meta: "Certificado Módular I: Desarrollo de Software",
     src: "assets/certs/Certificado_Modular_Desarrollo.pdf"
   }
 ];
@@ -69,8 +79,8 @@ function renderList() {
     const item = document.createElement("div");
     item.className = "cert-item";
     item.innerHTML = `
-<div class="cert-item__name">${c.name}</div>
 <div class="cert-item__meta">${c.meta}</div>
+<div class="cert-item__name">${c.name}</div>
 `;
 
     item.addEventListener("click", () => {
