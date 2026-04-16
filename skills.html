@@ -170,7 +170,7 @@
         </div>
       </div>
     </main>
-    <!-- MODAL CERTIFICACIONES (solo lista) -->
+    <!-- MODAL LISTA CERTIFICACIONES -->
     <div class="cert-modal" id="certModal" aria-hidden="true">
       <div
         class="cert-modal__panel"
@@ -186,6 +186,13 @@
 
         <!-- solo lista -->
         <div class="cert-modal__list" id="certList"></div>
+      </div>
+    </div>
+    <!-- MODAL VISOR PDF -->
+    <div id="pdfViewer" class="pdf-modal">
+      <div class="pdf-content">
+        <button id="closePdf">✕</button>
+        <iframe id="pdfFrame"></iframe>
       </div>
     </div>
     <script src="assets/js/script.js"></script>

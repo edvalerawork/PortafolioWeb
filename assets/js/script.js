@@ -1,5 +1,8 @@
 const toggle = document.getElementById('menuToggle');
 const navLinks = document.querySelector('.nav-links');
+const pdfModal = document.getElementById("pdfViewer");
+const pdfFrame = document.getElementById("pdfFrame");
+const closePdf = document.getElementById("closePdf");
 
 toggle.addEventListener('click', () => {
   toggle.classList.toggle('active');
@@ -48,7 +51,7 @@ const certs = [
   {
     name: "Instituto Certus (2026)",
     meta: "Certificado Módular III: Diseño de Software",
-    src: "assets/certs/Certificado_Modular_Diseño.pdf"
+    src: null // aún no disponible
   },
   {
     name: "Instituto Certus (2025)",
@@ -84,12 +87,21 @@ function renderList() {
 `;
 
     item.addEventListener("click", () => {
-      window.open(c.src, "_blank", "noopener,noreferrer"); // Abre en otra pestaña
-      modalClose(); // Opcional: cierra el modal al abrir
+      if (!c.src) {
+        mostrarAviso("⏳ Certificado en gestión");
+        return;
+      }
+
+      pdfFrame.src = c.src;
+      pdfModal.classList.add("active");
     });
 
     certList.appendChild(item);
   });
+}
+
+function mostrarAviso(msg) {
+  alert(msg);
 }
 
 if (openCerts) {
@@ -108,4 +120,9 @@ certModal?.addEventListener("click", (e) => { if (e.target === certModal) modalC
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && certModal?.classList.contains("is-open")) modalClose();
+});
+
+closePdf?.addEventListener("click", () => {
+  pdfModal.classList.remove("active");
+  pdfFrame.src = "";
 });
