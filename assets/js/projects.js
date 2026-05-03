@@ -2,8 +2,8 @@
 
 const projectModal = document.getElementById("projectModal");
 const closeProjectModal = document.getElementById("closeProjectModal");
-const prevProject = document.getElementById("prevProject");
-const nextProject = document.getElementById("nextProject");
+const prevProjectTop = document.getElementById("prevProjectTop");
+const nextProjectTop = document.getElementById("nextProjectTop");
 
 const modalProjectImage = document.getElementById("modalProjectImage");
 const modalProjectTitle = document.getElementById("modalProjectTitle");
@@ -23,7 +23,7 @@ let currentProject = 0;
 
 const projectData = [
   {
-    title: "Reportes de Seguridad Ciudadana",
+    title: "Reportes Seguridad Ciudadana",
     image: "assets/images/reportes-seguridad-ciudadana-login.webp",
     description:
       "Plataforma web orientada a gestión de incidencias ciudadanas, asignación automática, seguimiento por estados y control administrativo por roles.",
@@ -63,7 +63,7 @@ const projectData = [
   },
 
   {
-    title: "LUMI Kids Website",
+    title: "LUMI Kids",
     image: "assets/images/web-lumi-inicio.webp",
     description:
       "Sitio web interactivo enfocado en educación financiera infantil, diseñado para transmitir aprendizaje mediante una experiencia visual atractiva, moderna y dinámica.",
@@ -216,7 +216,7 @@ function closeModal() {
 
 document.querySelectorAll(".details-btn").forEach((button) => {
   button.addEventListener("click", () => {
-    currentProject = parseInt(button.dataset.project);
+    currentProject = parseInt(button.closest(".project-card").dataset.project);
     renderProject(currentProject);
 
     projectModal.classList.add("active");
@@ -236,18 +236,21 @@ projectModal?.addEventListener("click", (e) => {
 
 /* Navegación entre Proyectos */
 
-prevProject?.addEventListener("click", () => {
+function goPrevProject() {
   currentProject =
     (currentProject - 1 + projectData.length) % projectData.length;
 
   renderProject(currentProject);
-});
+}
 
-nextProject?.addEventListener("click", () => {
+function goNextProject() {
   currentProject = (currentProject + 1) % projectData.length;
 
   renderProject(currentProject);
-});
+}
+
+prevProjectTop?.addEventListener("click", goPrevProject);
+nextProjectTop?.addEventListener("click", goNextProject);
 
 /* Navegación con Teclado */
 
@@ -259,10 +262,10 @@ document.addEventListener("keydown", (e) => {
   }
 
   if (e.key === "ArrowLeft") {
-    prevProject.click();
+    goPrevProject();
   }
 
   if (e.key === "ArrowRight") {
-    nextProject.click();
+    goNextProject();
   }
 });

@@ -61,7 +61,7 @@
               </div>
 
               <div class="project-content">
-                <h2>Reportes de Seguridad Ciudadana</h2>
+                <h2>Reportes Seguridad Ciudadana</h2>
 
                 <p class="project-description">
                   Plataforma web para gestión de incidencias ciudadanas,
@@ -77,7 +77,7 @@
                 </div>
 
                 <div class="project-links">
-                  <button class="project-btn details-btn" data-project="0">
+                  <button class="project-btn details-btn">
                     <i class="bi bi-eye"></i> Detalles
                   </button>
 
@@ -121,7 +121,7 @@
                 </div>
 
                 <div class="project-links">
-                  <button class="project-btn details-btn" data-project="1">
+                  <button class="project-btn details-btn">
                     <i class="bi bi-eye"></i> Detalles
                   </button>
 
@@ -149,14 +149,11 @@
           <li>
             <article class="project-card" data-project="2">
               <div class="project-image">
-                <img
-                  src="assets/images/web-lumi-inicio.webp"
-                  alt="LUMI Kids Website"
-                />
+                <img src="assets/images/web-lumi-inicio.webp" alt="LUMI Kids" />
               </div>
 
               <div class="project-content">
-                <h2>LUMI Kids Website</h2>
+                <h2>LUMI Kids</h2>
 
                 <p class="project-description">
                   Plataforma interactiva enfocada en educación financiera para
@@ -170,7 +167,7 @@
                 </div>
 
                 <div class="project-links">
-                  <button class="project-btn details-btn" data-project="1">
+                  <button class="project-btn details-btn">
                     <i class="bi bi-eye"></i> Detalles
                   </button>
 
@@ -219,7 +216,7 @@
                 </div>
 
                 <div class="project-links">
-                  <button class="project-btn details-btn" data-project="2">
+                  <button class="project-btn details-btn">
                     <i class="bi bi-eye"></i> Detalles
                   </button>
 
@@ -267,7 +264,7 @@
                 </div>
 
                 <div class="project-links">
-                  <button class="project-btn details-btn" data-project="3">
+                  <button class="project-btn details-btn">
                     <i class="bi bi-eye"></i> Detalles
                   </button>
 
@@ -316,7 +313,7 @@
                 </div>
 
                 <div class="project-links">
-                  <button class="project-btn details-btn" data-project="4">
+                  <button class="project-btn details-btn">
                     <i class="bi bi-eye"></i> Detalles
                   </button>
 
@@ -346,9 +343,21 @@
     <!-- Modal -->
     <div id="projectModal" class="project-modal">
       <div class="project-modal-content">
-        <button id="closeProjectModal" class="project-modal-close">
-          <i class="bi bi-x-lg"></i>
-        </button>
+        <div class="project-modal-header">
+          <div class="project-modal-top-nav">
+            <button id="prevProjectTop">
+              <i class="bi bi-arrow-left"></i>
+            </button>
+
+            <button id="nextProjectTop">
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+
+          <button id="closeProjectModal" class="project-modal-close">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
         <div class="project-modal-body">
           <div class="project-modal-image">
             <img id="modalProjectImage" src="" alt="Proyecto" />
@@ -381,15 +390,6 @@
               >
                 <i class="devicon-github-original"></i> GitHub
               </a>
-              <div class="project-modal-links">
-                <button id="prevProject" class="project-btn">
-                  <i class="bi bi-arrow-left"></i> Proyecto anterior
-                </button>
-
-                <button id="nextProject" class="project-btn">
-                  Siguiente proyecto <i class="bi bi-arrow-right"></i>
-                </button>
-              </div>
             </div>
           </div>
         </div>

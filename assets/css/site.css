@@ -443,17 +443,72 @@
 
 .project-modal-close {
   position: absolute;
-  top: 18px;
-  right: 18px;
-  background: rgba(255, 255, 255, 0.08);
-  border: none;
-  color: white;
+  top: 22px;
+  right: 22px;
+
   width: 48px;
   height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
   border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+
+  color: white;
+  font-size: 1.2rem;
   cursor: pointer;
+
+  z-index: 2000;
+
+  transition: all 0.3s ease;
 }
 
+.project-modal-close:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(1.08);
+}
+.project-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.project-modal-top-nav {
+  display: flex;
+  gap: 12px;
+}
+
+.project-modal-top-nav button {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+
+  color: white;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.project-modal-top-nav button:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(1.08);
+}
 .project-modal-body {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -544,26 +599,6 @@
 
 /* Projects Modal Flechas */
 
-.project-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 52px;
-  height: 52px;
-  border: none;
-  border-radius: 50%;
-  background: rgb(255, 0, 0);
-  color: white;
-  cursor: pointer;
-}
-
-.project-nav.prev {
-  left: 15px;
-}
-
-.project-nav.next {
-  right: 15px;
-}
 
 /* Skills */
 
