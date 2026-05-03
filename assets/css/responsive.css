@@ -18,6 +18,46 @@
     margin-bottom: 20px;
     height: auto;
   }
+  .project-modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  /* Imagen principal arriba */
+  .project-modal-image {
+    width: 100%;
+    height: 260px;
+  }
+
+  /* Miniaturas inmediatamente debajo */
+  .project-modal-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: -8px;
+    margin-bottom: 20px;
+  }
+
+  .project-modal-gallery img {
+    height: 75px;
+  }
+
+  /* Texto después */
+  .project-modal-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-modal-info h2 {
+    font-size: 1.6rem;
+    margin-bottom: 14px;
+  }
+
+  .project-modal-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
 }
 
 /* Mobile */
@@ -74,7 +114,7 @@
 
     gap: 40px;
 
-    background: rgba(0,47,61,0.92);
+    background: rgba(0, 47, 61, 0.92);
     backdrop-filter: blur(8px);
 
     opacity: 0;
@@ -113,37 +153,112 @@
   }
 
   /* Proyectos */
-  .projects-title {
-    font-size: 2rem;
-    margin-bottom: 25px;
-  }
-
   .projects-list {
     grid-template-columns: 1fr;
-    gap: 22px;
   }
 
-  .project-item {
-    height: 240px;
-    border-width: 4px;
+  .project-image {
+    height: 180px;
   }
 
-  /* En mobile el overlay siempre visible */
-  .project-item .overlay {
-    opacity: 1;
-    pointer-events: auto;
+  .project-content {
+    padding: 18px;
   }
 
-  .project-item .overlay h2 {
-    font-size: 1.1rem;
-    opacity: 1;
-    transform: translateY(0);
+  .project-content h2 {
+    font-size: 1.25rem;
   }
 
-  .project-item .overlay .project-type {
+  .project-description {
+    font-size: 0.95rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+  }
+
+  .project-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Modal optimizado*/
+
+  .project-modal-content {
+    padding: 20px;
+    width: 100%;
+    max-height: 95vh;
+  }
+
+  .project-modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  /* Imagen principal */
+  .project-modal-image {
+    width: 100%;
+    height: 220px;
+  }
+
+  /* Miniaturas justo debajo */
+  .project-modal-gallery {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px;
+    margin-top: -4px;
+    margin-bottom: 18px;
+  }
+
+  .project-modal-gallery img {
+    height: 65px;
+    object-fit: cover;
+  }
+
+  /* Info */
+  .project-modal-info h2 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+  }
+
+  .project-modal-info p {
     font-size: 0.9rem;
-    opacity: 1;
-    transform: translateY(0);
+    line-height: 1.6;
+  }
+
+  /* Tecnologías */
+  .project-modal-tech {
+    justify-content: center;
+  }
+
+  .project-modal-tech i {
+    font-size: 1.65rem;
+  }
+
+  /* Botones */
+  .project-modal-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .project-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Flechas */
+  .project-nav {
+    width: 35px;
+    height: 35px;
+  }
+
+  .project-nav.prev {
+    left: 8px;
+  }
+
+  .project-nav.next {
+    right: 8px;
   }
 
   /* Contacto */
