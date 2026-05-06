@@ -6,22 +6,23 @@
 
 /* Variables de tema*/
 :root {
-  --bg-top: #002f3d;
-  --bg-bottom: #002f3d;
+  --bg-top: #0a192f;
+  --bg-bottom: #112240;
   --text: #ffffff;
+  --highlight: #ccd6f6;
+  --highlight-soft: rgba(204, 214, 246, 0.6);
 
-  --panel: rgba(255, 255, 255, 0.08);
-  --panel-2: rgba(255, 255, 255, 0.06);
-  --border: rgba(255, 255, 255, 0.15);
-  --border-soft: rgba(255, 255, 255, 0.12);
+  --panel: rgba(204, 214, 246, 0.08);
+  --panel-2: rgba(204, 214, 246, 0.06);
+  --border: rgba(204, 214, 246, 0.18);
+  --border-soft: rgba(204, 214, 246, 0.12);
 
-  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.35);
-  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 20px 40px rgba(2, 12, 27, 0.45);
+  --shadow-md: 0 10px 30px rgba(2, 12, 27, 0.35);
 
   --radius-sm: 12px;
   --radius-md: 14px;
   --radius-lg: 15px;
-  --radius-xl: 20px;
 
   --container: 1050px;
 

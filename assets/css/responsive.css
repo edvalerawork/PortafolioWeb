@@ -7,15 +7,15 @@
     grid-template-columns: 1fr;
   }
 
-  .about-images {
+  .about-image {
     height: auto;
-    margin-top: 40px;
+    margin-top: 5px;
   }
 
-  .about-images img {
+  .about-image img {
     position: static;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     height: auto;
   }
   .project-modal-body {
@@ -57,6 +57,9 @@
   .project-modal-info p {
     font-size: 1rem;
     line-height: 1.6;
+  }
+  .project-modal-top-nav button {
+    font-size: 0.95rem;
   }
 }
 
@@ -113,8 +116,7 @@
     align-items: center;
 
     gap: 40px;
-
-    background: rgba(0, 47, 61, 0.92);
+    background: rgba(10, 25, 47, 0.95);
     backdrop-filter: blur(8px);
 
     opacity: 0;
@@ -156,6 +158,10 @@
   .projects-list {
     grid-template-columns: 1fr;
   }
+  .projects-container h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
 
   .project-image {
     height: 180px;
@@ -193,8 +199,8 @@
     flex-direction: column;
   }
   .project-modal-close {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
     font-size: 1rem;
     position: static;
   }
@@ -212,12 +218,12 @@
     justify-content: space-between;
     align-items: center;
     gap: 18px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    border-bottom:none;
+    border-top: 1px solid var(--border-soft);
+    border-bottom: none;
     padding-top: 16px;
   }
-  .project-modal-top-nav {
-    justify-content: center;
+  .project-modal-top-nav button {
+    font-size: 0.85rem;
   }
   /* Imagen principal */
   .project-modal-image {
@@ -237,7 +243,7 @@
   .project-modal-gallery img {
     height: 48px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: var(--radius-sm);
   }
 
   /* Info */
@@ -282,6 +288,7 @@
   /* Contacto */
   .contact-container h1 {
     font-size: 2rem;
+    margin-bottom: 25px;
   }
 
   .contact-container p {
