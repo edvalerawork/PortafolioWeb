@@ -51,6 +51,10 @@ body.fade-in {
   opacity: 1;
 }
 
+body.menu-open,
+body.modal-open {
+  overflow: hidden;
+}
 /* Tipografía/Etiquetas comunes */
 strong {
   color: var(--text);

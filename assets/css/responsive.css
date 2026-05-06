@@ -65,6 +65,13 @@
 
 /* Mobile */
 @media (max-width: 768px) {
+  header {
+    position: relative;
+    height: 90px;
+  }
+  .container {
+    height: 100%;
+  }
   /* Hero */
   .hero h1 {
     font-size: 1.5rem;
@@ -98,9 +105,15 @@
 
   .logo {
     position: absolute;
-    top: 20px;
+    top: 50%;
     left: 35px;
+    transform: translateY(-50%);
     z-index: 1100;
+  }
+  .logo img {
+    display: block;
+    height: 45px;
+    width: auto;
   }
 
   .nav-links {

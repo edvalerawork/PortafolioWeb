@@ -7,12 +7,14 @@ const closePdf = document.getElementById("closePdf");
 toggle.addEventListener("click", () => {
   toggle.classList.toggle("active");
   navLinks.classList.toggle("active");
+  document.body.classList.toggle("menu-open");
 });
 
 document.querySelectorAll(".nav-links a").forEach((link) => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("active");
     toggle.classList.remove("active");
+    document.body.classList.remove("menu-open");
   });
 });
 
@@ -65,13 +67,14 @@ const certs = [
 function modalOpen() {
   certModal.classList.add("is-open");
   certModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
 }
 
 function modalClose() {
   certModal.classList.remove("is-open");
   certModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
 }
-
 function renderList() {
   certList.innerHTML = "";
 
@@ -128,4 +131,5 @@ document.addEventListener("keydown", (e) => {
 closePdf?.addEventListener("click", () => {
   pdfModal.classList.remove("active");
   pdfFrame.src = "";
+  document.body.classList.remove("modal-open");
 });
