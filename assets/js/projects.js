@@ -1,4 +1,4 @@
-/* Elementos */
+// Elementos
 
 const projectModal = document.getElementById("projectModal");
 const closeProjectModal = document.getElementById("closeProjectModal");
@@ -15,18 +15,17 @@ const modalProjectGallery = document.getElementById("modalProjectGallery");
 const modalProjectDemo = document.getElementById("modalProjectDemo");
 const modalProjectGithub = document.getElementById("modalProjectGithub");
 
-/* Estado */
-
+// Estado
 let currentProject = 0;
 
-/* Modal dinámico */
+// Modal dinámico
 
 const projectData = [
   {
     title: "Reportes Seguridad Ciudadana",
     image: "assets/images/reportes-seguridad-ciudadana-login.webp",
     description:
-      "Plataforma web orientada a gestión de incidencias ciudadanas, asignación automática, seguimiento por estados y control administrativo por roles.",
+      "Plataforma web desarrollada para gestión de incidencias ciudadanas, seguimiento operativo, asignación automática y administración por roles.",
     tech: [
       "devicon-java-plain colored",
       "devicon-spring-plain colored",
@@ -47,7 +46,7 @@ const projectData = [
     title: "TextiHuella Pet",
     image: "assets/images/textihuella-inicio.webp",
     description:
-      "Página web para emprendimiento de productos personalizados para mascotas, enfocada en marca, catálogo y pedidos vía WhatsApp.",
+      "Página web desarrollada para emprendimiento de productos personalizados para mascotas, enfocada en marca, catálogo y pedidos digitales.",
     tech: [
       "devicon-html5-plain colored",
       "devicon-css3-plain colored",
@@ -66,7 +65,7 @@ const projectData = [
     title: "LUMI Kids",
     image: "assets/images/web-lumi-inicio.webp",
     description:
-      "Sitio web interactivo enfocado en educación financiera infantil, diseñado para transmitir aprendizaje mediante una experiencia visual atractiva, moderna y dinámica.",
+      "Proyecto web interactivo desarrollado para educación financiera infantil, con enfoque visual dinámico y experiencia educativa.",
     tech: [
       "devicon-html5-plain colored",
       "devicon-css3-plain colored",
@@ -85,7 +84,7 @@ const projectData = [
     title: "IESTP Lurín",
     image: "assets/images/web-lurin-inicio.webp",
     description:
-      "Plataforma institucional responsiva enfocada en presencia educativa digital, estructura moderna y navegación clara para mejorar comunicación visual institucional.",
+      "Proyecto académico desarrollado como propuesta institucional para el IESTP Lurín, enfocado en diseño responsivo, estructura moderna y mejora de presencia digital educativa.",
     tech: [
       "devicon-html5-plain colored",
       "devicon-css3-plain colored",
@@ -104,7 +103,7 @@ const projectData = [
     title: "Encriptador de Texto",
     image: "assets/images/encriptador_texto.webp",
     description:
-      "Aplicación lógica desarrollada en JavaScript para cifrado y descifrado de texto mediante manipulación dinámica y procesamiento de entradas.",
+      "Proyecto de práctica desarrollado en Oracle Next Education (ONE) y Alura Latam, enfocado en lógica de programación y manipulación de texto con JavaScript.",
     tech: [
       "devicon-html5-plain colored",
       "devicon-css3-plain colored",
@@ -119,7 +118,7 @@ const projectData = [
     title: "Juego del número secreto",
     image: "assets/images/juego_secreto.webp",
     description:
-      "Proyecto interactivo centrado en lógica de programación, validaciones dinámicas y experiencia de usuario orientada al aprendizaje.",
+      "Proyecto formativo desarrollado en Oracle Next Education (ONE) y Alura Latam, orientado a lógica básica, interacción dinámica y fundamentos de JavaScript.",
     tech: [
       "devicon-html5-plain colored",
       "devicon-css3-plain colored",
@@ -131,20 +130,20 @@ const projectData = [
   },
 ];
 
-/* Render */
+// Render
 
 function renderProject(index) {
   const project = projectData[index];
 
-  /* Imagen principal */
+  // Imagen principal
   modalProjectImage.src = project.image;
   modalProjectImage.alt = project.title;
 
-  /* Texto */
+  // Texto
   modalProjectTitle.textContent = project.title;
   modalProjectDescription.textContent = project.description;
 
-  /* Tecnologías */
+  // Tecnologías
   modalProjectTech.innerHTML = "";
 
   project.tech.forEach((iconClass) => {
@@ -153,7 +152,7 @@ function renderProject(index) {
     modalProjectTech.appendChild(icon);
   });
 
-  /* Galería interactiva */
+  // Galería interactiva
   modalProjectGallery.innerHTML = "";
 
   project.gallery.forEach((imgSrc, imgIndex) => {
@@ -164,16 +163,16 @@ function renderProject(index) {
     img.loading = "lazy";
     img.decoding = "async";
 
-    /* Primera miniatura activa */
+    // Primera miniatura activa
     if (imgIndex === 0) {
       img.classList.add("active-thumb");
     }
 
-    /* Click cambia imagen principal */
+    // Click cambia imagen principal
     img.addEventListener("click", () => {
       modalProjectImage.src = imgSrc;
 
-      /* Reset thumbs */
+      // Reset thumbs
       document
         .querySelectorAll(".project-modal-gallery img")
         .forEach((thumb) => {
@@ -186,7 +185,7 @@ function renderProject(index) {
     modalProjectGallery.appendChild(img);
   });
 
-  /* Demo */
+  // Demo
   if (!project.demo || project.demo === "#") {
     modalProjectDemo.classList.add("disabled");
     modalProjectDemo.removeAttribute("href");
@@ -195,7 +194,7 @@ function renderProject(index) {
     modalProjectDemo.href = project.demo;
   }
 
-  /* GitHub */
+  // GitHub
   if (!project.github || project.github === "#") {
     modalProjectGithub.classList.add("disabled");
     modalProjectGithub.removeAttribute("href");
@@ -205,14 +204,14 @@ function renderProject(index) {
   }
 }
 
-/* Cerrar Modal */
+// Cerrar Modal
 
 function closeModal() {
   projectModal.classList.remove("active");
   document.body.style.overflow = "";
 }
 
-/* Abrir Modal */
+// Abrir Modal
 
 document.querySelectorAll(".details-btn").forEach((button) => {
   button.addEventListener("click", () => {
@@ -224,7 +223,7 @@ document.querySelectorAll(".details-btn").forEach((button) => {
   });
 });
 
-/* Eventos de cierre */
+// Eventos de cierre
 
 closeProjectModal?.addEventListener("click", closeModal);
 
@@ -234,7 +233,7 @@ projectModal?.addEventListener("click", (e) => {
   }
 });
 
-/* Navegación entre Proyectos */
+// Navegación entre Proyectos
 
 function goPrevProject() {
   currentProject =
@@ -252,7 +251,7 @@ function goNextProject() {
 prevProjectTop?.addEventListener("click", goPrevProject);
 nextProjectTop?.addEventListener("click", goNextProject);
 
-/* Navegación con Teclado */
+// Navegación con Teclado
 
 document.addEventListener("keydown", (e) => {
   if (!projectModal.classList.contains("active")) return;
